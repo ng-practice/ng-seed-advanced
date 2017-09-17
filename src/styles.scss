@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~material-design-icons-iconfont/dist/material-design-icons.css";
+@import "~normalize.css/normalize.css";
+
+/*
+ *
+ */
+ awr-login-page,
+ awr-register-page,
+ awr-user-questionaire {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+ md-form-field,
+ med-select {
+   display: block;
+   width: 100%;
+   padding-top: 8px;
+   padding-bottom: 8px;
+ }

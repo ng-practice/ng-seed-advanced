@@ -1,0 +1,24 @@
+<div [formGroup]="form">
+
+  <ng-container [ngSwitch]="question.controlType">
+    <md-form-field *ngSwitchCase="'textbox'">
+      <input
+        mdInput
+        [placeholder]="question.placeholder"
+        [formControlName]="question.key"
+        [type]="question.type">
+      <md-error *ngIf="!isValid">{{ question.placeholder }} is required</md-error>
+    </md-form-field>
+
+    <md-select
+      *ngSwitchCase="'dropdown'"
+      [placeholder]="question.placeholder"
+      [formControlName]="question.key">
+      <md-option
+        *ngFor="let opt of question.options"
+        [value]="opt.key">
+        {{ opt.value }}
+      </md-option>
+    </md-select>
+  </ng-container>
+</div>

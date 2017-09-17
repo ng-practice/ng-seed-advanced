@@ -1,16 +1,25 @@
+import { NavigationModule } from './navigation/navigation.module';
+import { SecurityModule } from './security/security.module';
+import { FeedbackModule } from './feedback/feedback.module';
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoot } from './app.component';
 
 @NgModule({
-  declarations: [
-    AppRoot
-  ],
+  declarations: [AppRoot],
   imports: [
-    BrowserModule
+    BrowserModule,
+
+    SecurityModule.forRoot({ targetUrlAfterSigningIn: ['/notes'] }),
+
+    NavigationModule,
+    FeedbackModule,
+
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppRoot]
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,0 +1,17 @@
+<div class="closable backdrop" (click)="close.emit()">
+</div>
+
+<div class="closable message-dialog">
+  <md-card>
+    <md-card-title>{{ title }}</md-card-title>
+    <md-card-content>{{ message }}</md-card-content>
+    <md-card-content>
+      <button
+        (click)="close.emit()"
+        md-raised-button
+        [color]="color">
+        Got it!
+      </button>
+    </md-card-content>
+  </md-card>
+</div>

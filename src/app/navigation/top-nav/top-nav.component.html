@@ -1,0 +1,7 @@
+<md-toolbar color="primary" >
+  <a routerLink="/" class="brand">
+    <md-icon>bookmark</md-icon>
+    <span>Aware</span>
+  </a>
+  <a [routerLink]="link.url" *ngFor="let link of links">{{ link.text }}</a>
+</md-toolbar>
