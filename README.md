@@ -17,7 +17,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 |        |Url|Description|
 |--------|---------|-----------|
 |`POST`  |/register|Add a new user|
-|`POST`  |/login   |Logging in a existing user|
+|`POST`  |/login   |Logging in a existing user `[1]`|
 |`GET`   |/is-user-authenticated|Check if user is authenticated|
 |`GET`   |/is-email-taken|Check if e-mail address is already in use|
 |`GET`   |/notes/all|Gets all notes|
@@ -25,6 +25,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 |`POST`  |/notes/create/|Creates a new note|
 |`PUT`   |/notes/update/|Updates a note|
 |`DELETE`|/notes/remove/:guid|Deletes the specified note|
+
+> **[1]** You can already log in with the user `trainee@training.com` having the password `1234`.
 
 ## Material Icons
 
