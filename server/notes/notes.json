@@ -1,6 +1,22 @@
 {
-    "234-234-654": {
-        "title": "Important, please remember",
-        "text": "Spread the word about Angular 5!"
+    "f6ce2f3e-650e-4fda-ae37-48f11659ca1a": {
+        "title": "Understand How to Style Angular Components",
+        "text": "https://egghead.io/courses/understand-how-to-style-angular-components?utm_source=twitter&utm_medium=social&utm_campaign=understand-how-to-style-angular-components"
+    },
+    "36d83aa8-3065-4df9-a9b2-a9b3ab402d1d": {
+        "title": "Continuous Integration with Angular",
+        "text": "https://loiane.com/2017/09/continuous-integration-with-angular-cli-travis-ci-firebase-greenkeeper-github/"
+    },
+    "368484af-ca37-4047-a4a0-d4f95ff81eb0": {
+        "title": "Testing ngrx-effects",
+        "text": "https://github.com/vsavkin/testing_ngrx_effects/blob/master/src/app/app.effects.spec.ts"
+    },
+    "a26047a9-f219-4957-ba7f-52fd7bb8a828": {
+        "title": "A deep dive into Angular's compiler",
+        "text": "https://medium.com/@urish/a-deep-deep-deep-deep-deep-dive-into-the-angular-compiler-5379171ffb7a"
+    },
+    "d5013103-d6bb-427d-8c7b-2042dd9604da": {
+        "title": "RxJS: Observables & Operators",
+        "text": "https://toddmotto.com/rxjs-observables-observers-operators#.WRzJpt4SQFU.twitter"
     }
 }
