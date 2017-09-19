@@ -14,7 +14,7 @@ const getTestBed = () =>
     schemas: [NO_ERRORS_SCHEMA]
   });
 
-describe('Component: NoteForm', () => {
+describe('[Notes] NoteForm', () => {
   let fixture: ComponentFixture<NoteFormComponent>;
   let noteForm: NoteFormComponent;
   let emailInput: DebugElement;
