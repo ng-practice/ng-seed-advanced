@@ -7,6 +7,7 @@ import { LocalStorage } from './local-storage.service';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/throw';
+import 'rxjs/add/observable/empty';
 
 import { Stranger } from '../models';
 
@@ -54,7 +55,8 @@ export class Authentication {
 
   isUserAuthenticated(): Observable<boolean> {
     return this.http
-      .get<boolean>(`${this.endpoint}/is-user-authenticated`)
+      .get<any>(`${this.endpoint}/is-user-authenticated`)
+      .map(state => state.isAuthenticated)
       .catch(() => Observable.of(false));
   }
 }
