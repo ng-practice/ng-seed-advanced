@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 import { LocalStorage } from './local-storage.service';
 
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/throw';
 
 import { Stranger } from '../models';
 
@@ -44,6 +45,11 @@ export class Authentication {
   register(stranger: Stranger) {
     return this.http
       .post(`${this.endpoint}/register`, stranger);
+  }
+
+  isEmailTaken(email: string) {
+    return this.http
+      .get<boolean>(`${this.endpoint}/is-email-taken/${email}`);
   }
 
   isUserAuthenticated(): Observable<boolean> {

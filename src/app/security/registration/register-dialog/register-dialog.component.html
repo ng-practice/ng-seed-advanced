@@ -5,6 +5,10 @@
         mdInput
         formControlName="email"
         placeholder="Email address">
+      <md-error
+        *ngIf="register.controls.email.hasError('emailTaken')">
+        Unfortunatelly the Email address is already taken.
+      </md-error>
     </md-form-field>
     <awr-password-inputs
       formControlName="password">

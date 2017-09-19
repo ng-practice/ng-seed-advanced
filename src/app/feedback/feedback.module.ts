@@ -7,6 +7,7 @@ import { FeedbackRoutingModule } from './feedback-routing.module';
 import { ComponentLibraryModule } from '../component-library/component-library.module';
 
 import { UserQuestionnaire, DynamicFormQuestion } from './forms';
+import { QuestionnaireBuilder } from './forms/services/questionnaire-builder';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { UserQuestionnaire, DynamicFormQuestion } from './forms';
 
     FeedbackRoutingModule
   ],
+  providers: [QuestionnaireBuilder],
   declarations: [UserQuestionnaire, DynamicFormQuestion]
 })
 export class FeedbackModule { }

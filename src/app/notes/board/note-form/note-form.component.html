@@ -1,0 +1,24 @@
+<awr-user-dialog title="Create new Note">
+  <form [formGroup]="createForm" class="content"
+    (ngSubmit)="createNote()">
+    <md-form-field>
+      <input
+        mdInput
+        formControlName="title"
+        type="text">
+    </md-form-field>
+    <md-form-field>
+      <input
+        mdInput
+        formControlName="text"
+        type="text">
+    </md-form-field>
+    <button
+      md-raised-button
+      [disabled]="create.invalid"
+      type="submit"
+      color="primary">
+      Create
+    </button>
+  </form>
+</awr-user-dialog>

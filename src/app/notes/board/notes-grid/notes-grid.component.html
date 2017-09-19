@@ -1,3 +1,15 @@
-<p>
-  notes-grid works!
-</p>
+<awr-note-form
+  (create)="createNote($event)">
+</awr-note-form>
+
+
+<ng-container *ngIf="notes$ | async; let notes; else loading">
+  <awr-note-card
+    [note]="note"
+    *ngFor="let note of notes">
+  </awr-note-card>
+</ng-container>
+
+<ng-template #loading>
+  <md-spinner></md-spinner>
+</ng-template>

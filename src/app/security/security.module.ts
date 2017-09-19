@@ -16,6 +16,7 @@ import { LoginPage, LoginDialog } from './login';
 import { RegisterDialog, RegisterPage } from './registration';
 
 import { Authentication } from './services/authentication.service';
+import { EmailTaken } from './validators/email-taken.service';
 
 @NgModule({
   imports: [
@@ -45,6 +46,7 @@ export class SecurityModule {
       providers: [
         LocalStorage,
         Authentication,
+        EmailTaken,
         provideAuthenticationInterceptor()
       ]
     };

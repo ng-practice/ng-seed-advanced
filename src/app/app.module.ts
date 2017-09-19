@@ -1,3 +1,4 @@
+import { NgrxModule } from './ngrx/ngrx.module';
 import { CoreModule } from './core/core.module';
 import { NavigationModule } from './navigation/navigation.module';
 import { SecurityModule } from './security/security.module';
@@ -14,6 +15,7 @@ import { AppRoot } from './app.component';
     BrowserModule,
 
     CoreModule,
+    NgrxModule,
 
     SecurityModule.forRoot({ targetUrlAfterSigningIn: ['/notes'] }),
 

@@ -10,6 +10,14 @@
       <md-error *ngIf="!isValid">{{ question.placeholder }} is required</md-error>
     </md-form-field>
 
+    <md-form-field *ngSwitchCase="'multiline'">
+      <textarea
+        mdInput
+        [formControlName]="question.key"
+        [type]="question.type"></textarea>
+      <md-error *ngIf="!isValid">{{ question.placeholder }} is required</md-error>
+    </md-form-field>
+
     <md-select
       *ngSwitchCase="'dropdown'"
       [placeholder]="question.placeholder"

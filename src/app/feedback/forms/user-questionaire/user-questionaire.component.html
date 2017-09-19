@@ -1,6 +1,12 @@
 <awr-user-dialog title="Feedback">
   <form [formGroup]="questionnaire" class="content">
 
+    <awr-dynamic-form-question
+      *ngFor="let question of questions"
+      [question]="question"
+      [form]="questionnaire">
+    </awr-dynamic-form-question>
+
     <div class="form-row">
       <button
         md-raised-button

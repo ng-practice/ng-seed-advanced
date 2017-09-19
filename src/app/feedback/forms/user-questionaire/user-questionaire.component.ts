@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FeedbackQuestions } from '../../models/feedback-questions';
 import { QuestionBase } from '../../models/question-base';
+import { QuestionnaireBuilder } from '../services/questionnaire-builder';
 
 
 @Component({
@@ -12,10 +13,13 @@ import { QuestionBase } from '../../models/question-base';
 })
 export class UserQuestionnaire implements OnInit {
   questions: QuestionBase<any>[];
-  questionnaire = new FormGroup({});
+  questionnaire: FormGroup;
+
+  constructor(private qb: QuestionnaireBuilder) {}
 
   ngOnInit() {
     this.questions = FeedbackQuestions.all();
+    this.questionnaire = this.qb.group(this.questions);
   }
 
   submit() {

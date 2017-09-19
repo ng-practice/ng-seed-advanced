@@ -1,5 +1,6 @@
 import { QuestionBase } from './question-base';
 import { TextboxQuestion } from './question-textbox';
+import { MultilineQuestion } from './question-multiline';
 import { Validators } from '@angular/forms';
 import { QuestionDropdown } from './question-dropdown';
 
@@ -35,7 +36,14 @@ export class FeedbackQuestions {
           order: 3
         },
         'text'
-      )
+      ),
+      new MultilineQuestion(
+        {
+          key: 'details',
+          validators: [Validators.minLength(20)],
+          order: 3
+        }
+      ),
     ];
 
     return questions.sort((current, next) => current.order - next.order);
