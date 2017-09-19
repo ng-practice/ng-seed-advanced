@@ -1,3 +1,4 @@
+import { provideAuthenticationInterceptor } from './services/authentication.interceptor';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
@@ -13,6 +14,8 @@ import { LocalStorage } from './services/local-storage.service';
 
 import { LoginPage, LoginDialog } from './login';
 import { RegisterDialog, RegisterPage } from './registration';
+
+import { Authentication } from './services/authentication.service';
 
 @NgModule({
   imports: [
@@ -39,7 +42,11 @@ export class SecurityModule {
   static forRoot(config: SignInConfig): ModuleWithProviders {
     return {
       ngModule: SecurityModule,
-      providers: [LocalStorage]
+      providers: [
+        LocalStorage,
+        Authentication,
+        provideAuthenticationInterceptor()
+      ]
     };
   }
 }

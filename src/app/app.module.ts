@@ -1,3 +1,4 @@
+import { CoreModule } from './core/core.module';
 import { NavigationModule } from './navigation/navigation.module';
 import { SecurityModule } from './security/security.module';
 import { FeedbackModule } from './feedback/feedback.module';
@@ -11,6 +12,8 @@ import { AppRoot } from './app.component';
   declarations: [AppRoot],
   imports: [
     BrowserModule,
+
+    CoreModule,
 
     SecurityModule.forRoot({ targetUrlAfterSigningIn: ['/notes'] }),
 

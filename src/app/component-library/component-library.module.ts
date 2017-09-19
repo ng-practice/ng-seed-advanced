@@ -22,6 +22,9 @@ import { UserDialog } from './user-dialog/user-dialog.component';
 import { MessageModal } from './message-modal/message-modal.component';
 
 import { NotFound } from './not-found/not-found.component';
+import {
+  PasswordInputs
+} from './password-inputs/password-inputs.component';
 
 @NgModule({
   imports: [
@@ -37,11 +40,13 @@ import { NotFound } from './not-found/not-found.component';
   declarations: [
     MessageModal,
     NotFound,
-    UserDialog
+    UserDialog,
+    PasswordInputs
   ],
   exports: [
     NotFound,
-    UserDialog
+    UserDialog,
+    PasswordInputs
   ],
   entryComponents: [MessageModal],
   providers: [MODAL, NotFound]

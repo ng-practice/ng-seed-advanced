@@ -5,5 +5,12 @@
         "roles": [
             "member"
         ]
+    },
+    "gw@co-it.eu": {
+        "email": "gw@co-it.eu",
+        "password": "5e428d8b4db5612ae6283e80f49e1f269a953ad8163bf45fc1e3695c966f1e4a",
+        "roles": [
+            "member"
+        ]
     }
 }

@@ -1,4 +1,4 @@
-import { Todo } from '../todos/model';
+import { Todo } from './todo';
 
 export class Note {
   guid: string;

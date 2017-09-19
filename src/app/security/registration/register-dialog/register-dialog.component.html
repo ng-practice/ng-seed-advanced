@@ -1,12 +1,20 @@
 <awr-user-dialog title="Register">
   <form [formGroup]="register" class="content">
     <md-form-field>
-      <input mdInput placeholder="Email address">
+      <input
+        mdInput
+        formControlName="email"
+        placeholder="Email address">
     </md-form-field>
+    <awr-password-inputs
+      formControlName="password">
+    </awr-password-inputs>
   </form>
   <div class="actions">
     <button
       md-raised-button
+      (click)="registerUser()"
+      [disabled]="register.invalid"
       color="primary">Register</button>
   </div>
 </awr-user-dialog>
