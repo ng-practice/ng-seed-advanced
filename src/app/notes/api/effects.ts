@@ -19,6 +19,14 @@ export class NotesEffects {
         .map(notes => new Action.LoadAllSuccess(notes))
       );
 
+  @Effect()
+  create = this.action$
+    .ofType(Action.CREATE_NOTE)
+    .exhaustMap(({ payload: note }: Action.CreateNote) =>
+      this.notesStock
+        .create(note)
+        .map(() => new Action.LoadAll()));
+
   constructor(
     private action$: Actions,
     private notesStock: NotesStock

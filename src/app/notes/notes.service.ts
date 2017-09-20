@@ -15,4 +15,9 @@ export class NotesStock {
     return this.http
       .get<Note[]>(`${this.endpoint}/notes/all`);
   }
+
+  create(note: Note) {
+    return this.http
+      .post(`${this.endpoint}/notes/create`, note);
+  }
 }
